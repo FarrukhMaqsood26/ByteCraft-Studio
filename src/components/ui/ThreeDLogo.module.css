@@ -1,0 +1,31 @@
+.logoContainer {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.logoContainer:active {
+  cursor: grabbing;
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  outline: none;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    height: 320px;
+  }
+}

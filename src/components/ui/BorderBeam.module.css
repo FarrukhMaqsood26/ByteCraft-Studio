@@ -1,0 +1,33 @@
+.borderBeamContainer {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1.5px;
+}
+
+.beam {
+  position: absolute;
+  aspect-ratio: 1;
+  width: 250%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: laserSpin linear infinite;
+  filter: drop-shadow(0 0 10px #5EEAD4);
+}
+
+@keyframes laserSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,110 @@
+.process {
+  padding: var(--space-5xl) 0;
+  background-color: var(--color-bg-main);
+  position: relative;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  position: relative;
+  margin-top: var(--space-3xl);
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding: 0 var(--space-xs);
+}
+
+.num {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: #0D9488;
+  font-family: monospace;
+  letter-spacing: -0.02em;
+}
+
+.icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #16A34A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-fast);
+}
+
+.step:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+  border-color: rgba(22, 163, 74, 0.4);
+  color: #16A34A;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.2);
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-default);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.step:hover .content {
+  transform: translateY(-6px);
+  border-color: rgba(22, 163, 74, 0.35);
+  background: #FFFFFF;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.08), 0 0 25px rgba(22, 163, 74, 0.08);
+}
+
+.title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+  transition: color var(--transition-fast);
+}
+
+.step:hover .title {
+  color: #16A34A;
+}
+
+.desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 1024px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}

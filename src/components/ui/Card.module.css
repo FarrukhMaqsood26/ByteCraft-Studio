@@ -1,0 +1,31 @@
+.card {
+  background: var(--color-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: all var(--transition-default);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.cardHover:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-card-hover);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 0 30px rgba(22, 163, 74, 0.1);
+}
+
+.cardDark {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.cardDark.cardHover:hover {
+  background: #FFFFFF;
+  border-color: var(--color-border-hover);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 0 35px rgba(22, 163, 74, 0.12);
+}
